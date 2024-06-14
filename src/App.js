@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Project from './components/Project';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Intro from './components/Intro';
+import Intro3 from './components/Intro3';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [currentScreen, setCurrentScreen] = useState('intro');
+
+  const navigateTo = (screen) => {
+    setCurrentScreen(screen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {currentScreen === 'intro' && <Intro navigateTo={navigateTo} />}
+      {currentScreen === 'intro3' && <Intro3 navigateTo={navigateTo} />}
+      {currentScreen === 'home' && (
+        <>
+          <Navbar />
+          <section id="home">
+            <Home />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="project">
+            <Project />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+          <Footer />
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;

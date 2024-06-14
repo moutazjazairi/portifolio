@@ -1,0 +1,110 @@
+.contact-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .see-more-button {
+    background-color: #fff;
+    border: 2px solid #1572B6;
+    border-radius: 34px;
+    color: #1572B6;
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    padding: 0px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 70px;
+    text-size-adjust: 126px 23px;
+    
+  }
+  
+  .contact-header {
+    margin-bottom: 20px;
+  }
+  
+  .contact-header h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #006AB8;
+    display: flex;
+    margin-left: 290px;
+  }
+  
+  .contact-header p {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #333;
+    text-decoration: underline;
+    display: flex;
+    margin-left: 290px;
+    margin-bottom: 60px;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: left;
+    gap: 300px;
+    margin-left: 290px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-item img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .contact-item h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #000;
+    margin: 0;
+    line-height: 39px;
+    display: flex;
+  }
+  
+  .contact-item p {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin: 0;
+    font-weight: 400;
+    line-height: 39px;
+    display: flex;
+  }
+  
+
+  @media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+    }
+
+    .contact-header {
+        margin-bottom: 20px;
+      }
+      
+      .contact-header h2 {
+      display: flex;
+      }
+      
+      
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 20px;
+        margin-left:190px;
+      }
+
+
+}
